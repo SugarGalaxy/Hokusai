@@ -19,7 +19,7 @@ class _PredictedGlucoseChartState extends State<PredictedGlucoseChart> {
 
   @override
   Widget build(BuildContext context) => SafeArea(
-      child: Scaffold(
+          child: Scaffold(
         body: SfCartesianChart(
           tooltipBehavior: _tooltipBehavior,
           series: <ChartSeries>[
@@ -29,7 +29,7 @@ class _PredictedGlucoseChartState extends State<PredictedGlucoseChart> {
                 xValueMapper: (GlucoseData, _) => GlucoseData.minutes),
           ],
           primaryXAxis:
-          NumericAxis(edgeLabelPlacement: EdgeLabelPlacement.shift),
+              NumericAxis(edgeLabelPlacement: EdgeLabelPlacement.shift),
           primaryYAxis: NumericAxis(rangePadding: ChartRangePadding.round),
         ),
       ));
