@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:get/get.dart';
-import 'package:hokusai/routes/app_pages.dart';
-import 'package:hokusai/theme.dart';
+import 'package:hokusai/pages/home_page/iob_chart.dart';
+import 'package:hokusai/pages/home_page/predicted_glucose_chart.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -11,16 +9,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You are on the home page!',
-            ),
-          ],
+      body: ListView(children: [
+        Container(
+          height: MediaQuery.of(context).size.height / 2,
+          child: PredictedGlucoseChart(),
         ),
-      ),
+        Container(
+          height: MediaQuery.of(context).size.height / 2,
+          child: InsulinOnBoard(),
+        ),
+      ]),
     );
   }
 }
