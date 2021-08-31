@@ -31,6 +31,7 @@ class _PredictedGlucoseChartState extends State<PredictedGlucoseChart> {
           primaryXAxis:
               NumericAxis(edgeLabelPlacement: EdgeLabelPlacement.shift),
           primaryYAxis: NumericAxis(rangePadding: ChartRangePadding.round),
+          backgroundColor: Colors.grey[900],
         ),
       ));
 

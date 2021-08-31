@@ -23,7 +23,7 @@ class _InsulinOnBoard extends State<InsulinOnBoard> {
         body: SfCartesianChart(
           tooltipBehavior: _tooltipBehavior,
           series: <ChartSeries>[
-            SplineSeries<InsulinOnBoardData, double>(
+            SplineAreaSeries<InsulinOnBoardData, double>(
                 dataSource: _chartData,
                 yValueMapper: (InsulinOnBoardData, _) =>
                     InsulinOnBoardData.insulin,
@@ -33,6 +33,7 @@ class _InsulinOnBoard extends State<InsulinOnBoard> {
           primaryXAxis:
               NumericAxis(edgeLabelPlacement: EdgeLabelPlacement.shift),
           primaryYAxis: NumericAxis(rangePadding: ChartRangePadding.round),
+          backgroundColor: Colors.grey[900],
         ),
       ));
 
