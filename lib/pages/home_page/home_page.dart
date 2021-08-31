@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hokusai/pages/home_page/insulin_dose.dart';
 import 'package:hokusai/pages/home_page/iob_chart.dart';
 import 'package:hokusai/pages/home_page/predicted_glucose_chart.dart';
 
@@ -11,12 +12,16 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(children: [
         Container(
-          height: MediaQuery.of(context).size.height / 2,
+          height: MediaQuery.of(context).size.height / 3,
           child: PredictedGlucoseChart(),
         ),
         Container(
-          height: MediaQuery.of(context).size.height / 2,
+          height: MediaQuery.of(context).size.height / 3,
           child: InsulinOnBoard(),
+        ),
+        Container(
+          height: MediaQuery.of(context).size.height / 3,
+          child: InsulinDose(),
         ),
       ]),
     );

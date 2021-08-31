@@ -39,11 +39,11 @@ class _InsulinOnBoard extends State<InsulinOnBoard> {
 
   List<InsulinOnBoardData> getChartData() {
     final List<InsulinOnBoardData> chartData = [
-      InsulinOnBoardData(65, 120),
-      InsulinOnBoardData(60, 115),
-      InsulinOnBoardData(55, 112),
-      InsulinOnBoardData(50, 119),
-      InsulinOnBoardData(45, 110)
+      InsulinOnBoardData(65, 0.5),
+      InsulinOnBoardData(60, 2.0),
+      InsulinOnBoardData(55, 3.5),
+      InsulinOnBoardData(50, 4.5),
+      InsulinOnBoardData(45, 5.5)
     ];
     return chartData;
   }
